@@ -8,7 +8,7 @@ const getTodoList = (req, res) => {
 
 const addTodoList = (req, res) => {
     const newTodo = {
-        id: number(uniqueId()),
+        id: Number(uniqueId()),
         task: req.body.task
     };
 
