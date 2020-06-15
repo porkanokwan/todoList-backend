@@ -8,7 +8,7 @@ const getTodoList = (req, res) => {
 
 const addTodoList = (req, res) => {
     const newTodo = {
-        id: uniqueId(),
+        id: number(uniqueId()),
         task: req.body.task
     };
 
@@ -28,7 +28,7 @@ const updateTodoList = (req, res) => {
     const newTask = req.body.task;
     const targetIndex = todoList.findIndex(todo => todo.id === targetId);
     todoList[targetIndex] = {
-        id: todoList[targetIndex].id,
+        id: targetId,
         task: newTask
     };
     res.status(200).send({ message: "updating is success" });
