@@ -1,6 +1,6 @@
 const { uniqueId } = require("lodash");
 
-const todoList = [];
+let todoList = [];
 
 const getTodoList = (req, res) => {
     res.status(200).send(todoList);
